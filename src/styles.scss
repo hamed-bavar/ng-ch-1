@@ -49,3 +49,8 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --base: #fff;
+  --overlay: rgba(0, 0, 0, 0.5);
+}
