@@ -1,0 +1,10 @@
+@import "../../../../assets/mixins/mixins.scss";
+.header {
+  width: 100vw;
+  height: 70px;
+  color: var(--base);
+  background: var(--secondary);
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-1);
+  @include flex;
+}

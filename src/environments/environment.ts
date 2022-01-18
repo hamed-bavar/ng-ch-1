@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  MULTIPLY_URL: 'assets/Multiply.json',
+  ADD_URL: 'assets/Add.json',
+  NUMBERS_URL: 'assets/Numbers.json',
 };
 
 /*

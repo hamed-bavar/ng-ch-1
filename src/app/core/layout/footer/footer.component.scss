@@ -1,0 +1,8 @@
+@import "../../../../assets//mixins/mixins.scss";
+.footer {
+  width: 100vw;
+  height: 60px;
+  background-color: var(--secondary);
+  color: var(--base);
+  @include flex;
+}
