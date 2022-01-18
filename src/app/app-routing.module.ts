@@ -1,6 +1,6 @@
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 const routes: Routes = [
   { path: '', redirectTo: 'cards', pathMatch: 'full' },
   {
@@ -8,6 +8,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./core/core.module').then((mod) => mod.CoreModule),
   },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
