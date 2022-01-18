@@ -1,5 +1,6 @@
 import { FetchDataService } from './../services/fetch-data.service';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cards',
@@ -11,5 +12,8 @@ export class CardsComponent implements OnInit {
 
   ngOnInit(): void {
     this.fd.getNumbersValue().subscribe((e) => console.log(e));
+  }
+  onSelectValue(value: string) {
+    console.log(value);
   }
 }

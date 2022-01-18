@@ -8,6 +8,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CardComponent } from './cards/card/card.component';
+import { SelectFilterComponent } from './select-filter/select-filter.component';
 @NgModule({
   declarations: [
     CardsComponent,
@@ -15,6 +16,7 @@ import { CardComponent } from './cards/card/card.component';
     HeaderComponent,
     FooterComponent,
     CardComponent,
+    SelectFilterComponent,
   ],
   imports: [CommonModule, CoreRoutingModule, SharedModule, HttpClientModule],
 })
