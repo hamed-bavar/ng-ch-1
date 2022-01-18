@@ -1,3 +1,4 @@
+import { SelectFilterComponent } from './select-filter/select-filter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CardComponent } from './cards/card/card.component';
-import { SelectFilterComponent } from './select-filter/select-filter.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CardsComponent,
@@ -18,6 +19,12 @@ import { SelectFilterComponent } from './select-filter/select-filter.component';
     CardComponent,
     SelectFilterComponent,
   ],
-  imports: [CommonModule, CoreRoutingModule, SharedModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    CoreRoutingModule,
+    SharedModule,
+    ReactiveFormsModule,
+  ],
 })
 export class CoreModule {}

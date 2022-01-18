@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-select-filter',
@@ -7,8 +8,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SelectFilterComponent implements OnInit {
   @Output() onSelectValue: EventEmitter<string> = new EventEmitter();
+  selected = new FormControl('all', [Validators.required]);
   constructor() {}
-
   ngOnInit(): void {}
   selectValueChanged(value: string) {
     this.onSelectValue.emit(value);
