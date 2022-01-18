@@ -1,3 +1,4 @@
+@import "../../../assets/mixins/mixins.scss";
 .overlay {
   position: fixed;
   top: 0;
@@ -5,6 +6,7 @@
   width: 100vw;
   height: 100vh;
   background: var(--overlay);
+  @include flex;
 }
 .lds-grid {
   display: inline-block;
