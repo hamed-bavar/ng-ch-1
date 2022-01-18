@@ -1,3 +1,4 @@
+import { FetchDataService } from './../services/fetch-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent implements OnInit {
-  constructor() {}
+  constructor(private fd: FetchDataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.fd.getNumbersValue().subscribe((e) => console.log(e));
+  }
 }
