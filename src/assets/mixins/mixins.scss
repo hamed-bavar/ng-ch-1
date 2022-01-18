@@ -1,0 +1,20 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin tablet-up {
+  @media (min-width: 550px) {
+    @content;
+  }
+}
+@mixin medium-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
