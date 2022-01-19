@@ -1,7 +1,6 @@
 import { FetchDataService } from './http/fetch-data.service';
 import { Injectable } from '@angular/core';
 import { combineLatest } from 'rxjs';
-
 @Injectable({
   providedIn: 'root',
 })
