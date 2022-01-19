@@ -22,6 +22,6 @@ export class FetchDataService {
     return this.http.get<MultiplyResponse>(this.MULTIPLY_URL);
   }
   getNumbersValue() {
-    return this.http.get<NumbersResponse>(this.NUMBERS_URL);
+    return this.http.get<NumbersResponse[]>(this.NUMBERS_URL);
   }
 }

@@ -1,3 +1,4 @@
+import { CalculationService } from './../services/calculation.service';
 import { FetchDataService } from '../services/http/fetch-data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
@@ -9,11 +10,17 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class CardsComponent implements OnInit {
   cardsData = [];
-  constructor(private fd: FetchDataService) {}
+  constructor(private calculationService: CalculationService) {}
 
-  ngOnInit(): void {}
-  onSelectValue(value: string) {
-    console.log(value);
+  ngOnInit(): void {
+    this.getCardsData('all');
   }
-  getCardsData = () => {};
+  onSelectValue(filter: string) {
+    this.getCardsData(filter);
+  }
+  getCardsData = (filter: string) => {
+    this.calculationService.getCardsData(filter).subscribe((items) => {
+      console.log(items);
+    });
+  };
 }
