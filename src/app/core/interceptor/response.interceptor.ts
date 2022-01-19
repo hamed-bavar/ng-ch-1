@@ -31,6 +31,8 @@ export class ResponseInterceptor implements HttpInterceptor {
               ? 'SERVER ERROR'
               : 'Something went wrong';
           this._snackBar.open(message, 'close', SNACKBAR_CONFIG);
+        } else {
+          this._snackBar.open('Something went wrong', 'close', SNACKBAR_CONFIG);
         }
         return throwError(e);
       })

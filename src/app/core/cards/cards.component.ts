@@ -1,4 +1,4 @@
-import { FetchDataService } from './../services/fetch-data.service';
+import { FetchDataService } from '../services/http/fetch-data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
@@ -8,12 +8,12 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent implements OnInit {
+  cardsData = [];
   constructor(private fd: FetchDataService) {}
 
-  ngOnInit(): void {
-    this.fd.getNumbersValue().subscribe((e) => console.log(e));
-  }
+  ngOnInit(): void {}
   onSelectValue(value: string) {
     console.log(value);
   }
+  getCardsData = () => {};
 }
