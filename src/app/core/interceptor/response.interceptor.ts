@@ -1,3 +1,4 @@
+import { LoadingService } from './../services/loading.service';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import {
@@ -7,14 +8,14 @@ import {
   HttpInterceptor,
   HttpErrorResponse,
 } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, Observable, tap, throwError } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 const SNACKBAR_CONFIG = {
   duration: 3000,
 };
 @Injectable()
 export class ResponseInterceptor implements HttpInterceptor {
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private ls: LoadingService) {}
 
   intercept(
     request: HttpRequest<any>,

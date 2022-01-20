@@ -1,4 +1,4 @@
-import { AppRoutingModule } from './../app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { SelectFilterComponent } from './select-filter/select-filter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './../shared/shared.module';
@@ -23,7 +23,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    AppRoutingModule,
     SharedModule,
     ReactiveFormsModule,
     HttpClientModule,

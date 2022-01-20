@@ -1,5 +1,3 @@
-import { NumbersResponse } from './http/Responses.interface';
-import { FetchDataService } from './http/fetch-data.service';
 import { Injectable } from '@angular/core';
 import { filter } from 'rxjs/operators';
 import {
@@ -12,6 +10,8 @@ import {
   of,
   toArray,
 } from 'rxjs';
+import { FetchDataService } from './http/fetch-data.service';
+import { INumbersResponse } from 'src/app/shared/types/Responses.interface';
 @Injectable({
   providedIn: 'root',
 })
@@ -43,7 +43,7 @@ export class CalculationService {
         return this.fetchDataService.getNumbersValue().pipe(
           mergeMap((items) => of(...items)),
           filter(
-            (item: NumbersResponse) =>
+            (item: INumbersResponse) =>
               item.action === filterOperations || filterOperations === 'all'
           ),
           map((currentItem) => {

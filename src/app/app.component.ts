@@ -8,9 +8,6 @@ import { Observable, Subject } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  isloading$: Observable<boolean>;
-  constructor(private ls: LoadingService) {
-    this.isloading$ = this.ls.isLoading$;
-  }
   title = 'challenge1';
+  constructor(private ls: LoadingService) {}
 }

@@ -1,7 +1,7 @@
+import { ICard } from './../../shared/types/Card.interface';
+import { LoadingService } from './../services/loading.service';
 import { CalculationService } from './../services/calculation.service';
-import { FetchDataService } from '../services/http/fetch-data.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cards',
@@ -9,8 +9,11 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent implements OnInit {
-  cardsData = [];
-  constructor(private calculationService: CalculationService) {}
+  cardsData: ICard[] = [];
+  constructor(
+    private calculationService: CalculationService,
+    private ls: LoadingService
+  ) {}
 
   ngOnInit(): void {
     this.getCardsData('all');
@@ -19,8 +22,10 @@ export class CardsComponent implements OnInit {
     this.getCardsData(filter);
   }
   getCardsData = (filter: string) => {
+    this.ls.setLoading();
     this.calculationService.getCardsData(filter).subscribe((items) => {
-      console.log(items);
+      this.cardsData = items;
+      this.ls.removeLoading();
     });
   };
 }

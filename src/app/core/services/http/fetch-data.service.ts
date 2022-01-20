@@ -2,11 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 import { Injectable } from '@angular/core';
 import {
-  AddResponse,
-  MultiplyResponse,
-  NumbersResponse,
-} from './Responses.interface';
-
+  IAddResponse,
+  IMultiplyResponse,
+  INumbersResponse,
+} from 'src/app/shared/types/Responses.interface';
 @Injectable({
   providedIn: 'root',
 })
@@ -16,12 +15,12 @@ export class FetchDataService {
   private NUMBERS_URL = environment.NUMBERS_URL;
   constructor(private http: HttpClient) {}
   getAddValue() {
-    return this.http.get<AddResponse>(this.ADD_URL);
+    return this.http.get<IAddResponse>(this.ADD_URL);
   }
   getMultiplyValue() {
-    return this.http.get<MultiplyResponse>(this.MULTIPLY_URL);
+    return this.http.get<IMultiplyResponse>(this.MULTIPLY_URL);
   }
   getNumbersValue() {
-    return this.http.get<NumbersResponse[]>(this.NUMBERS_URL);
+    return this.http.get<INumbersResponse[]>(this.NUMBERS_URL);
   }
 }
