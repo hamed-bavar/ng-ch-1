@@ -1,1 +1,14 @@
-<p>card works!</p>
+<div class="card">
+  <div class="image">
+    <img src="../../../../assets/1.jpg" />
+  </div>
+  <div class="bottom-content">
+    <div class="title">
+      <div>
+        {{ value1.toString() }}
+        {{ action === "add" ? "+" : "*" }}
+        {{ value2.toString() }} = {{ result.toString() }}
+      </div>
+    </div>
+  </div>
+</div>

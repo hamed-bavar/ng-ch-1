@@ -1,4 +1,12 @@
 .cards-container {
+  width: 100%;
   padding: 2rem 2rem;
   text-align: right;
+
+  .cards-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

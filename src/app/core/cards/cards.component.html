@@ -1,5 +1,17 @@
 <div class="cards-container">
-  <app-select-filter
-    (onSelectValue)="onSelectValue($event)"
-  ></app-select-filter>
+  <div class="select-wrapper">
+    <app-select-filter
+      (onSelectValue)="onSelectValue($event)"
+    ></app-select-filter>
+  </div>
+  <div class="cards-wrapper">
+    <app-card
+      *ngFor="let card of cardsData"
+      [value1]="card.value1"
+      [action]="card.action"
+      [value2]="card.value2"
+      [result]="card.result"
+    >
+    </app-card>
+  </div>
 </div>

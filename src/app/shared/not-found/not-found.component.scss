@@ -1,0 +1,11 @@
+@import "../../../assets/mixins/mixins.scss";
+:host {
+  width: 100vw;
+  height: 100vh;
+  @include flex;
+  font-weight: bold;
+  font-size: 2rem;
+  a {
+    cursor: pointer;
+  }
+}
