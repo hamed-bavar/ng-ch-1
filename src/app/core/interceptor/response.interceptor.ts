@@ -17,9 +17,9 @@ export class ResponseInterceptor implements HttpInterceptor {
   constructor(private _snackBar: MatSnackBar) {}
 
   intercept(
-    request: HttpRequest<unknown>,
+    request: HttpRequest<any>,
     next: HttpHandler
-  ): Observable<HttpEvent<unknown>> {
+  ): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(
       catchError((e: HttpErrorResponse) => {
         if (e.status === 404) {

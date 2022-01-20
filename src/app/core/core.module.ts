@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './../app-routing.module';
 import { SelectFilterComponent } from './select-filter/select-filter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './../shared/shared.module';
@@ -21,10 +22,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    HttpClientModule,
     CoreRoutingModule,
+    AppRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
 })
 export class CoreModule {}
