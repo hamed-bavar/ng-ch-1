@@ -35,6 +35,7 @@ export class ResponseInterceptor implements HttpInterceptor {
         } else {
           this._snackBar.open('Something went wrong', 'close', SNACKBAR_CONFIG);
         }
+        this.ls.removeLoading();
         return throwError(e);
       })
     );
