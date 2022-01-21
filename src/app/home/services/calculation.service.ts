@@ -12,6 +12,8 @@ import {
 } from 'rxjs';
 import { FetchDataService } from './http/fetch-data.service';
 import { INumbersResponse } from 'src/app/shared/types/Responses.interface';
+import { OperationsType } from 'src/app/shared/types/Operations.interface';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -37,7 +39,8 @@ export class CalculationService {
         ]);
     }
   }
-  getCardsData(filterOperations: string) {
+
+  getCardsData(filterOperations: string): Observable<OperationsType[]> {
     return this.getValuesByfilter(filterOperations).pipe(
       switchMap(([multiplyValue, addValue]) => {
         return this.fetchDataService.getNumberAndAction().pipe(
