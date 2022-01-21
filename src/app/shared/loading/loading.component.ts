@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class LoadingComponent implements OnInit {
   loading$: Observable<boolean>;
   constructor(private ls: LoadingService) {
-    this.loading$ = this.ls.isLoading$;
+    this.loading$ = this.ls.getIsLoading();
   }
 
   ngOnInit(): void {}
