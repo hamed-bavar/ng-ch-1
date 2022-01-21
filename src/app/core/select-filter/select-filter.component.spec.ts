@@ -23,9 +23,6 @@ describe('SelectFilterComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
   it('should emit changed value to parent component', () => {
     // //test angular material select option
     let selectValue: string | undefined;
