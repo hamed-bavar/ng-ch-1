@@ -9,5 +9,5 @@ import { Observable, Subject } from 'rxjs';
 })
 export class AppComponent {
   title = 'challenge1';
-  constructor(private ls: LoadingService) {}
+  constructor() {}
 }

@@ -16,7 +16,6 @@ const SNACKBAR_CONFIG = {
 @Injectable()
 export class ResponseInterceptor implements HttpInterceptor {
   constructor(private _snackBar: MatSnackBar, private ls: LoadingService) {}
-
   intercept(
     request: HttpRequest<any>,
     next: HttpHandler
