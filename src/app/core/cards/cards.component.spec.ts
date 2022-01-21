@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardsComponent } from './cards.component';
@@ -9,6 +11,8 @@ describe('CardsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [CardsComponent],
+      imports: [HttpClientModule],
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
 
