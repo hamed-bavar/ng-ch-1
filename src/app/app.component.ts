@@ -1,4 +1,4 @@
-import { LoadingService } from './core/services/loading.service';
+import { LoadingService } from './shared/services/loading.service';
 import { Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 

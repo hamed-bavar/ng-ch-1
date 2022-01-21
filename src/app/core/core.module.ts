@@ -1,28 +1,24 @@
-import { SelectFilterComponent } from './select-filter/select-filter.component';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CoreRoutingModule } from './core-routing.module';
-import { CardsComponent } from './cards/cards.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { CardComponent } from './cards/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
-    CardsComponent,
-    LayoutComponent,
     HeaderComponent,
     FooterComponent,
-    CardComponent,
-    SelectFilterComponent,
+    NotFoundComponent,
+    LayoutComponent,
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule,
     SharedModule,
+    RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],

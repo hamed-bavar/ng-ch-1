@@ -1,5 +1,5 @@
 import { ICard } from './../../shared/types/Card.interface';
-import { LoadingService } from './../services/loading.service';
+import { LoadingService } from '../../shared/services/loading.service';
 import { CalculationService } from './../services/calculation.service';
 import { Component, OnInit } from '@angular/core';
 

@@ -1,4 +1,4 @@
-import { LoadingService } from './../services/loading.service';
+import { LoadingService } from '../../shared/services/loading.service';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import {

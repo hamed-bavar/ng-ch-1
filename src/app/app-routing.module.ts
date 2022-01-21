@@ -1,4 +1,4 @@
-import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { NotFoundComponent } from './core/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: 'cards',
     loadChildren: () =>
-      import('./core/core.module').then((mod) => mod.CoreModule),
+      import('./home/home.module').then((mod) => mod.HomeModule),
   },
   { path: '**', component: NotFoundComponent },
 ];
