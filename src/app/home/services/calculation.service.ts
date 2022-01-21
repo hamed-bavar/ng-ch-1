@@ -40,7 +40,7 @@ export class CalculationService {
   getCardsData(filterOperations: string) {
     return this.getValuesByfilter(filterOperations).pipe(
       switchMap(([multiplyValue, addValue]) => {
-        return this.fetchDataService.getNumbersValue().pipe(
+        return this.fetchDataService.getNumberAndAction().pipe(
           mergeMap((items) => of(...items)),
           filter(
             (item: INumbersResponse) =>

@@ -20,7 +20,7 @@ export class FetchDataService {
   getMultiplyValue() {
     return this.http.get<IMultiplyResponse>(this.MULTIPLY_URL);
   }
-  getNumbersValue() {
+  getNumberAndAction() {
     return this.http.get<INumbersResponse[]>(this.NUMBERS_URL);
   }
 }
