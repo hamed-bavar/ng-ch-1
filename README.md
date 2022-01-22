@@ -1,12 +1,14 @@
 # Challenge #1
 
-This project is made using [Angular CLI](https://ng-ch-1.vercel.app) version 13.1.3.
+This project is made using [Angular CLI](https://angular.io/) version 13.1.3.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
+
+Click on [this link](https://ng-ch-1.vercel.app) to see the project
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
