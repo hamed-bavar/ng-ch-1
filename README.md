@@ -1,6 +1,6 @@
 # Challenge #1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+This project is made using [Angular CLI](https://ng-ch-1.vercel.app) version 13.1.3.
 
 ## Development server
 
